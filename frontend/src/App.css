@@ -1,0 +1,109 @@
+@import "react-slideshow-image/dist/styles.css";
+.logo{
+    padding: 0%;
+    margin-top: 0px;
+    width:100px;
+    height: 45px;
+}
+
+/*BUTTONS*/
+
+.button{
+    border: 1.5px solid rgb(127, 211, 183);
+    background-color: transparent;
+    color:rgb(28, 101, 150);
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.button:hover {
+    border: 1.5px solid rgb(28, 101, 150);
+    color:rgb(127, 211, 183);
+    border-width: 1.5px;
+    border-radius: 10px;   
+}
+
+.buttonDanger{
+    border: 1.5px solid rgb(219, 48, 153);
+    background-color: transparent;
+    color:rgb(219, 48, 153);
+    border-radius: 10px;
+}
+.buttonDanger:hover {
+    border: 1.5px solid rgb(28, 101, 150);
+    color: rgb(127, 211, 183);
+    border-width: 1.5px;
+    border-radius: 10px;   
+}
+
+.buttonlogin {
+    margin-left: 50px; 
+    font-size: 12px;
+    width: 60px;
+    height: 30px;
+    border: 1.5px solid rgb(127, 211, 183);
+    background-color: transparent;
+    color:rgb(28, 101, 150);
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+
+.buttonlogin:hover {
+    border: 1.5px solid rgb(28, 101, 150);
+    color:rgb(127, 211, 183);
+    border-width: 1.5px;
+    border-radius: 10px;   
+}
+
+/* INPUTS*/
+
+.inputsearch{
+    border: 1px solid rgb(127, 211, 183);
+     margin-right: 10px;
+    border-radius: 15px;
+ }
+.inputsearch:focus {
+color: rgb(165, 158, 158);
+outline:none;
+border: 2px solid rgb(176, 212, 200);
+}
+.input{
+    border: 1px solid rgb(127, 211, 183);
+    margin-right: 10px;
+    border-radius: 15px;
+    margin-top: 10px;
+    width: 300px;
+    color: rgb(28, 101, 150);
+    font-size: medium;
+ }
+.input:focus {
+color: rgb(28, 101, 150);
+outline:none;
+border: 2px solid rgb(176, 212, 200);
+}
+
+/* LINKS */ 
+
+.Qlink{
+    margin-top: 5px;
+    font-size:smaller;
+     margin-left:10px;
+}
+.linklogin{
+    margin-left:10px;
+    text-decoration:none;
+     color: rgb(28, 101, 150);
+}
+.linklogin:hover{
+   color: rgb(90, 161, 137);
+}
+
+/* FORMS */
+.divform{
+    display:block;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    margin-top: 50px;
+}
