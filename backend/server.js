@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const cors=require('cors')
+//const cors=require('cors')
 const PORT = 5000 ;
 const database=require('./config/connexion');
 const authRouter = require('./routes/auth')
@@ -23,10 +23,10 @@ app.use(express.json())
         } 
         app.options('*',cors())*/
 app.use("/animeapp",authRouter);
-app.use("/animeapp",animeRouter);
-app.use("/animeapp",userRouter);
-app.use("/animeapp",newsRouter);
-app.use("/animeapp",commentRouter);
+//app.use("/animeapp/anime",animeRouter);
+//app.use("/animeapp/user",userRouter);
+//app.use("/animeapp/news",newsRouter);
+//app.use("/animeapp/comment",commentRouter);
 
 
 app.listen(PORT, () => console.log(`running on ${PORT}`));
