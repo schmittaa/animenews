@@ -2,13 +2,14 @@ const Comment  = require('../models/Comment')
 
 //Add comment
 exports.addComment = async (req, res) => {
-    let { commentaire, like, dislike} = req.body;
+    let { commentaire} = req.body;
+    let {id}=req.params
+    console.log(id)
       try {
             const comment = new Comment({
                 commentaire, 
-                like, 
-                dislike, 
-                //username
+                userId:req.user.id,
+                newsId:id
             })
             await comment.save();
             res.status(201).send(` ${commentaire} added`)
@@ -31,8 +32,8 @@ exports.removeComment = async (req, res) =>{
 //List Comment
 exports.listComment = async (req, res) =>{
     try {
-        const comment = await Comment.find();
-        res.status(200).send({ msg: "list of comments ", comment })
+        const comments = await Comment.find({newsId:req.params.newsId}).populate("userId", ["email"]);
+        res.status(200).send({ msg: "list of comments ", comments })
     } catch (error) {
         res.status(500).send("Not found")
     }

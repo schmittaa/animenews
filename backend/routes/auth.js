@@ -4,7 +4,7 @@ const { register, login, current } = require("../controllers/authController");
 const isAuth = require("../middlewares/isAuth");
 const router = express.Router();
 
-router.post('/register', register) //add register rules
+router.post('/register', RegisterRules, validator, register) //add register rules
 router.post('/login', login)
 router.get('/currentUser', isAuth, current)
 

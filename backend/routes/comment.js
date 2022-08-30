@@ -3,9 +3,9 @@ const { addComment, removeComment, listComment, oneComment, updateComment } = re
 const router = express.Router()
 const isAuth = require('../middlewares/isAuth');
 
-router.post('/addComment',isAuth, addComment)
+router.post('/addComment/:id',isAuth, addComment)
 router.delete('/deleteComment/:id',isAuth, removeComment) 
-router.get('/allComment', isAuth, listComment) 
+router.get('/allComment/:newsId', listComment) 
 router.get('/oneComment/:id', isAuth, oneComment) 
 router.put('/updateComment/:id', isAuth, updateComment)  
 

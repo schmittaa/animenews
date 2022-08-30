@@ -1,9 +1,25 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
 .logo{
     padding: 0%;
     margin-top: 0px;
     width:100px;
     height: 45px;
 }
+.app{
+  font-family: sans-serif;
+}
+/*TITLES*/
+.welcome{
+    float: right;
+    color:   rgb(107, 68, 170);
+    margin-right: 50px;
+    margin-top: 20px; 
+    margin: auto;
+    color: rgb(127, 211, 183);
+    font: normal 2.5em 'tahoma';
+    text-shadow: 5px 2px , rgba(163, 163, 163, 0.603), 2px 4px rgb(107, 68, 170), 3px 5px #22232470;
+}
+
 
 /*BUTTONS*/
 
@@ -26,10 +42,15 @@
     background-color: transparent;
     color:rgb(219, 48, 153);
     border-radius: 10px;
+    padding: 5px;
+    float: right;
+    margin-bottom: 10px;
+    margin-right: 10px;
+
 }
 .buttonDanger:hover {
-    border: 1.5px solid rgb(28, 101, 150);
-    color: rgb(127, 211, 183);
+    border: 1.5px solid rgba(145, 67, 115, 0.884);
+    color:rgba(145, 67, 115, 0.884);
     border-width: 1.5px;
     border-radius: 10px;   
 }
@@ -45,8 +66,6 @@
     border-radius: 10px;
     margin-right: 10px;
 }
-
-
 .buttonlogin:hover {
     border: 1.5px solid rgb(28, 101, 150);
     color:rgb(127, 211, 183);
@@ -54,6 +73,33 @@
     border-radius: 10px;   
 }
 
+.iconButton{
+  border: 0px ;
+  background-color: transparent;
+  border-radius: 10px;
+  float: right;
+
+}
+.addButton{
+  border: 0px ;
+  background-color: transparent;
+  margin-left: 68%;
+}
+.buttonRemove{
+  border: 0px ;
+  background-color: transparent;
+  color:rgb(219, 48, 153);
+  border-radius: 10px;
+  padding: 5px;
+  float: right;
+
+}
+.buttonRemove:hover{
+  border: 1px solid rgb(219, 48, 153);
+  background-color: transparent;
+  border-radius: 10px;
+
+}
 /* INPUTS*/
 
 .inputsearch{
@@ -80,6 +126,68 @@ color: rgb(28, 101, 150);
 outline:none;
 border: 2px solid rgb(176, 212, 200);
 }
+.comment{
+    border: 1px solid rgb(127, 211, 183);
+    margin-right: 10px;
+    border-radius: 15px;
+    margin-top: 10px;
+    width: 200px;
+    color: rgb(28, 101, 150);
+    font-size: smaller;
+}
+.comment:focus {
+  color: rgb(28, 101, 150);
+  outline:none;
+  border: 2px solid rgb(176, 212, 200);
+  }
+  .showComments{
+    margin-top: 20px;
+    font-size: 12px;
+    color: rgb(28, 101, 150);
+    height: 10px;
+  }
+  .showComments:hover{
+    color: rgb(135, 190, 226);
+  }
+
+  .CommentCard{
+    width:450px;
+    margin-left: 45%;
+    display:flex;
+    font-size: small;
+    color:rgb(28, 101, 150);
+    border-style: double;
+    border-color: rgb(228, 231, 230);
+  }
+/*DROPDOWN*/
+.dropdownMenu{
+  background-color: transparent;
+  color:rgb(28, 101, 150);
+  font-size: larger;
+  border-radius: 10px;
+  width: 120px; 
+  height: 25px; 
+  margin-left: 10px;
+  border: 0px ;
+  outline:#e2e8f0;
+}
+.dropdown{
+  background-color: transparent;
+  color:rgb(28, 101, 150);
+  border-radius: 10px;
+  width: 80px; 
+  height: 25px; 
+  margin-left: 10px;
+  border: 1px solid rgb(176, 212, 200);
+  outline:#e2e8f0;
+}
+.dropdown:disabled{
+  background-color:#ebecee;
+  
+}
+.dropdowndiv{
+  display:inline-flex
+}
 
 /* LINKS */ 
 
@@ -96,6 +204,16 @@ border: 2px solid rgb(176, 212, 200);
 .linklogin:hover{
    color: rgb(90, 161, 137);
 }
+  /*Background*/
+  .bg{
+    width: 300px;
+    height:580px;
+    border-radius: 10px;
+  }
+  .loginDiv{
+    display: flex;
+   margin-left: 25%;
+  }
 
 /* FORMS */
 .divform{
@@ -103,6 +221,117 @@ border: 2px solid rgb(176, 212, 200);
     flex-wrap: wrap;
     width: 400px;
     height: 400px;
+    margin-top: 150px;
+    margin-left: 10px;
+}
+
+.divLoad{
+    margin-left: 40%;
+    margin-top: 5%;
+}
+
+  /*CARD */
+  
+  .divCard{
+    display: flex;
+    flex-wrap: wrap;
     margin: auto;
-    margin-top: 50px;
+    width: 80%;
+    margin-top: 20px;
+  }
+  .Textt{
+    color: rgba(83, 141, 160, 0.781);
+  }
+  .Carduser {
+    width: 300px;
+    height: 340px;
+    margin-left: 30px;
+    margin-bottom: 15px;
+    color: rgba(83, 141, 160, 0.781);
+  }
+
+  .imgCard{
+    width: 20px;
+    height: 20px;
+  }
+  .imgCmt{
+    width: 15px;
+    height: 15px;
+  }
+  .editImg{
+    width: 37px;
+    height: 36px;
+  }
+  .addImg{
+    width: 60px;
+    height: 60px;
+  }
+  .poster{
+    width:130px;
+    height:140px;
+    margin-right: 10px;
+    margin-top: 10px;
+
+  }
+  .animeDiv{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    text-align: justify;
+  }
+  .inconuser {
+    width: 60px;
+    height: 60px;
+    float: right;
+  }
+
+  .CardNews{
+    margin-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+
+    }
+/* CARD FOOTER */ 
+.footer{
+  font-size:14px;
+  color: grey;
+}
+
+/* CAROUSSEL */
+.sliderImg{
+ width: 700px;
+ height: 400px;
+}
+
+.image-gallery-slide .image-gallery-description {
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  left: 40%;
+  bottom:0%;
+  line-height: 1;
+  justify-content: center;
+}
+.image-gallery {
+  width: 250px;
+  height: 180;
+  margin-top : 8px;
+  margin-left: 8px;
+}
+.imgGallery{
+  margin-left: 30%;
+}
+
+.notfound{
+  color: rgba(89, 133, 133, 0.692);
+  font-family:cursive;
+}
+
+
+.homediv{
+ width: 1293px;
+ height: 290px;
+ background-image: url('../public/img/bg.png');
+ margin-top: 5px;
+
 }

@@ -1,0 +1,42 @@
+.divDash{
+    padding-top: 150px;
+
+width: 60%;
+margin: auto;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+justify-items:center;
+font-size: smaller;
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.divBDash{
+    width: 70%;
+    margin-top: 50px;
+    margin: auto;
+    justify-content: space-between;
+    background-color:rgba(199, 217, 235, 0.418);
+}
+
+.divleft{
+    margin-top: 20px;
+
+}
+.divright{
+    margin-top: 20px;
+
+
+}
+.divleftbtm{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.divrightbtm{
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+.Card{
+color: rgb(31, 123, 199);
+text-decoration: none;
+}

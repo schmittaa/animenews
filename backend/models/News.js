@@ -2,16 +2,18 @@ const mongoose = require('mongoose');
 
 const newsSchema = new mongoose.Schema({
     message : {
-        type : [String],
+        type : String,
         required:true
     },
     anime : {
-        type : [String],
+        type : String,
     },
-//date
+    date :{
+        type : Date, 
+        default: Date.now
+    } 
     //comment 
-    like : Number,
-    dislike :Number
+   
 })
 
 module.exports = mongoose.model('News', newsSchema)

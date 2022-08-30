@@ -43,8 +43,8 @@ exports.listNews = async (req, res) =>{
 exports.oneNews = async (req, res) =>{
     const { id } = req.params;
   try {
-    const news = await News.findById(id);
-    res.status(200).send(news);
+    const onenew = await News.findById(id);
+    res.status(200).send(onenew);
   } catch (error) {
     res.status(500).send("Not found")
 }

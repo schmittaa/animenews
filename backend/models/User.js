@@ -3,17 +3,17 @@ const mongoose = require('mongoose');
 const userSchema = new mongoose.Schema({
     name: {
         type : String,
-        require: true,
+        required: true,
     },
     email: {
         type : String,
-        require: true,
+        required: true,
         toUpperCase : true,
         unique : true
     },
     password : {
         type : String,
-        require: true,
+        required: true,
     }, 
     favoris : {
         type : [String]
@@ -24,7 +24,8 @@ const userSchema = new mongoose.Schema({
         default : "user"
     },
     picture : {
-        type : [String]
+        type : String,
+        default :"./img/user.png"
     }
 })
 

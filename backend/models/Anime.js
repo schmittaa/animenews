@@ -19,6 +19,9 @@ const animeSchema = new mongoose.Schema({
     },
     frameUrl :{
         type : String,
+    },
+    date :{
+        type : Date,
     }  
 
 })

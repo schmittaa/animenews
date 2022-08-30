@@ -1,4 +1,4 @@
-import { REGISTER } from "../types";
+import { CURRENT, FAIL, LOGIN, LOGOUT, REGISTER } from "../types";
 
 const initialState = {
   auth:false,
@@ -8,11 +8,23 @@ const initialState = {
 
 const authReducer = (state = initialState, { type, payload }) => {
 switch(type){
- case REGISTER :
+  case REGISTER :
+  case LOGIN :
   localStorage.setItem('token', payload.token);
    return {...state, user:payload.user, auth:true, loading:false}
+   
 
-   default: return state; 
+  case FAIL :
+  case LOGOUT :
+    localStorage.removeItem('token') 
+  return {...state, user:null, auth:false, loading:false}
+   
+  case CURRENT :
+    return {
+      ...state, user: payload, auth: true, loading: false
+    }
+  
+  default: return state; 
 }
 
 }

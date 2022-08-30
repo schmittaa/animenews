@@ -5,9 +5,18 @@ const commentSchema = new mongoose.Schema({
         type : String,
         require: true,
     },
-    like : Number,
-    dislike : Number
-    //user
+    date :{
+        type : Date, 
+        default: Date.now 
+    } ,
+    userId:{
+        type : mongoose.Schema.Types.ObjectId,
+        ref:'User'
+    },
+    newsId:{
+        type : mongoose.Schema.Types.ObjectId,
+        ref:'News'
+    }
 })
 
 module.exports  = mongoose.model("Comment", commentSchema)
