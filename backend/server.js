@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const PORT = 5000 ;
+const PORT = process.env.PORT || 5000 ;
 const database=require('./config/connexion');
 const authRouter = require('./routes/auth')
 const animeRouter = require('./routes/anime')
