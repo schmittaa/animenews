@@ -6,7 +6,13 @@
   "scripts": {
     "server": "npx nodemon backend/server.js",
     "client": "cd frontend && npm start",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "node server.js",
+    "server-install": "npm install",
+    "client-install": "cd client && npm install",
+    "install-all": "concurrently \"npm run server-install\" \"npm run client-install\"",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+
   },
   "keywords": [],
   "author": "",

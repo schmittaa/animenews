@@ -8,7 +8,6 @@ function Dashboard() {
   const user = useSelector(state => state.authReducer.user)
   return (
 
-    (user.role === "admin") ?
       
     <div className='divBDash'>
     <div className='divDash'>
@@ -30,7 +29,7 @@ function Dashboard() {
           <Card.Body>
             <Card.Title>Info about anime</Card.Title>
             <Card.Text>
-              animes(10)
+              animes(3)
             </Card.Text>
           </Card.Body>
         </Card>        </div>
@@ -47,8 +46,6 @@ function Dashboard() {
     </div>
     </div>
       
-      :
-      <Navigate to= {"/*"}/>   
 
   )
 }

@@ -31,18 +31,6 @@ function NavBar() {
                                  
 
 
-                                    {
-                                        (user.role === "admin") &&
-                                        <div>
-                                            <Nav
-                                                className="me-auto my-2 my-lg-0"
-                                                style={{ maxHeight: '100px' }}
-                                                navbarScroll>
-                                                <Nav.Link  style={{ marginRight: "60px" }} as={Link} to="/dashboard">Dashboard</Nav.Link>
-                                            </Nav>
-
-                                        </div>
-                                    }
                                     <Form className="d-flex">
                                         <Link to="/profile"><button className="button"> Profile</button></Link>
                                         <Link to="/login"><button className="button" onClick={() => dispatch(logout())}> Logout </button></Link>

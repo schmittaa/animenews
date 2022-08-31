@@ -17,12 +17,8 @@ function Login() {
   const handleSubmit = (e)=>{
     e.preventDefault();
     dispatch(userLogin(data, navigate))
-    if(user?.role==="admin"){
-      navigate("/dashboard");
-    }
-    else { 
       navigate("/profile");
-  }
+
   }
  
   return (

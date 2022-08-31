@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './profile.css';
 import { useDispatch, useSelector } from 'react-redux'
 import { updateUser } from '../../redux/actions/userActions';
+import Dashboard from "./Dashboard"
 
 function Profile() {
 
@@ -135,6 +136,9 @@ function Profile() {
         </div>
       </div>
     </div>
+{    (user.role === "admin") && <Dashboard/>
+
+}    
     </div>
 
     
