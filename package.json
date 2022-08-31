@@ -6,7 +6,7 @@
   "scripts": {
     "server": "npx nodemon backend/server.js",
     "client": "cd frontend && npm start",
-    "start": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
