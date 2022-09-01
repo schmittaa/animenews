@@ -7,7 +7,7 @@ const animeRouter = require('./routes/anime')
 const userRouter = require('./routes/user')
 const newsRouter = require('./routes/news')
 const commentRouter =require('./routes/comment')
-
+const path = require('path')
 
 
 database();
